@@ -20,11 +20,11 @@ while (++$i < $d*2) {
    imageline($im,$x1,2*$r-$y1,$x2,2*$r-$y2,$g);
   }
 }
-
 $it=imagecreatetruecolor(255,15);
 //imagestring($it, 8, 8, 0, $d. ' '. $s , $w);
 imagestring($it, 8, 8, 0, $d , $w);
 imagecopymerge($im, $it, -1, 8, -4, 2, 255, 15, 88);
 header( 'Content-Type: image/jpeg' );
 imagejpeg($im);
+imagedestroy($im);
 ?>
