@@ -20,18 +20,6 @@ while (++$i < $d*2) {
    imageline($im,$x1,2*$r-$y1,$x2,2*$r-$y2,$g);
   }
 }
-$d=date ('Ymd His');
-$ip=$_SERVER['REMOTE_ADDR'];
-if($ip!='92.232.227.77'){
-if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
-  $ip = $_SERVER['HTTP_CLIENT_IP'];
- } else if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-  $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
- }
- $m=$d .'_' . $ip . '_'.$s. "\n" ;
- $f='etl.txt';
- file_put_contents($f,$m, FILE_APPEND | LOCK_EX);
-}
 
 $it=imagecreatetruecolor(255,15);
 //imagestring($it, 8, 8, 0, $d. ' '. $s , $w);
