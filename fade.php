@@ -21,7 +21,6 @@ while (++$i < $d*2) {
   }
 }
 $it=imagecreatetruecolor(255,15);
-//imagestring($it, 8, 8, 0, $d. ' '. $s , $w);
 imagestring($it, 8, 8, 0, $d , $w);
 imagecopymerge($im, $it, -1, 8, -4, 2, 255, 15, 88);
 header( 'Content-Type: image/jpeg' );
