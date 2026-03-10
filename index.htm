@@ -1,0 +1,24 @@
+<title>interval</title>
+<style>
+body {background-color: 200020}
+</style>
+<script>
+var si='';
+d=0;
+function f1(){
+si=setInterval("fade()",1000);
+}
+function f2(){
+si=clearInterval(si);
+}
+function fade(){
+od=d;
+document.getElementById("i1").src = "fade.php?" + od;
+d=Date.now();
+document.getElementById("i0").src = "fade.php?" + d;
+}
+</script>
+<body>
+<center>
+<image onmouseover = 'f1()' onmouseout='f2()' id='i1' src='fade.php' height="100%">
+<image src='' id='i0' width=0>
